@@ -1,0 +1,11 @@
+proxy:
+  port: 19132
+  mode: bedrock # Does not matter.
+  motd: RaptorsMC
+  dimensions: true # Enable dimensions when traveling between worlds.
+  auth-forward: true # Basically allowing xbl to be forwarded.
+  unknown-packets: true # If packets are unknown, proxy will forward them to the server
+servers:
+  hub:
+    port: 1928
+    
