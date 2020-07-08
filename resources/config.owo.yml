@@ -1,0 +1,12 @@
+proxy:
+  port: 19132
+  mode: bedrock # Does not matter.
+  motd: RaptorsMC
+  dimensions: on # Enable dimensions when traveling between worlds.
+  auth-forward: on # Basically allowing xbl to be forwarded.
+  unknown-packets: on # If packets are unknown, proxy will forward them to the server
+servers:
+  Test Server:
+    port: 19133
+    name: test
+    api: on # Whether VeloProxy api should be enabled
