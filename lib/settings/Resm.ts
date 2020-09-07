@@ -1,5 +1,5 @@
 import { exists } from "https://deno.land/std/fs/exists.ts";
-import VeloProxyError from "../VeloProxyError.ts";
+
 class ResourceManager {
      private _path: string;
      private _defaults: string[];
@@ -14,6 +14,7 @@ class ResourceManager {
      public async checkAllDefaults(): Promise<boolean> {
           for await (const item of this._defaults) {
                if (!await exists(this._path + `/${item}`)) {
+                    // @ts-ignore
                     const err: VeloProxyError = new VeloProxyError('Default resource: "' + item + '" not found.');
                     err.hMsg = 'You can resolve this error by redownloading the resource folder from the github.';
                     let stack: string = `Default resource "${item}" of required default resources was missing!\n`;
