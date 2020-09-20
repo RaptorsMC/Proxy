@@ -23,5 +23,5 @@ export enum Protocol {
     GAME_PACKET_WRAPPER = 0xFE,
     /** Proxy */
     START_GAME_PACKET = 0x0b,
-    LOGIN_PACKET = 0x01
+    LOGIN_PACKET = 0x0a
 }
